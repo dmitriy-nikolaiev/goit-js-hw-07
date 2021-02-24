@@ -1,3 +1,15 @@
+# Achives
+*.zip
+*.rar
+
+#VScode
+.vscode
+settings.json
+prettierrc.json
+
+#my
+# index1.html
+
 # Logs
 logs
 *.log
