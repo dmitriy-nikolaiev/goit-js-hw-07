@@ -7,7 +7,7 @@
   margin-right: 10px;
 }
 .gallery-image {
-  max-height: 200px;
+  width: 100%;
 }
 
 #validation-input {
