@@ -1,0 +1,29 @@
+#gallery {
+  list-style-type: none;
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.gallery-item:not(:last-child) {
+  margin-right: 10px;
+}
+/* .gallery-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+} */
+.gallery-image {
+  /* width: 200px; */
+  max-height: 200px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
