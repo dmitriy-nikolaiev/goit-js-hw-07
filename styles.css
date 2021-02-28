@@ -8,6 +8,7 @@
 }
 .gallery-image {
   width: 100%;
+  max-height: 250px;
 }
 
 #validation-input {
