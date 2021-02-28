@@ -1,18 +1,12 @@
 #gallery {
   list-style-type: none;
   display: flex;
-  /* flex-wrap: wrap; */
 }
 
 .gallery-item:not(:last-child) {
   margin-right: 10px;
 }
-/* .gallery-item {
-  margin-right: 10px;
-  margin-bottom: 10px;
-} */
 .gallery-image {
-  /* width: 200px; */
   max-height: 200px;
 }
 
