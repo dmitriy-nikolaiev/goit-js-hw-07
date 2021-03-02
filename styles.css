@@ -1,6 +1,7 @@
 #gallery {
   list-style-type: none;
   display: flex;
+  align-items: center;
 }
 
 .gallery-item:not(:last-child) {
@@ -8,7 +9,7 @@
 }
 .gallery-image {
   width: 100%;
-  max-height: 250px;
+  max-width: 300px;
 }
 
 #validation-input {

@@ -5,37 +5,37 @@ const createBtnRef = document.querySelector(
 const destroyBtnRef = document.querySelector(
   '#controls button[data-action="destroy"]',
 );
-
 const boxesDivRef = document.querySelector('div#boxes');
+
+let boxSize = 30;
 
 const destroyBoxes = () => {
   boxesDivRef.innerHTML = '';
+  boxSize = 30;
+  inputNumberRef.value = 0;
 };
-// Нужно ли использовать Math.random().toFixed() ?
 
 const createBoxes = amount => {
-  destroyBoxes();
-  let boxSize = 30;
   const createdBoxes = [];
-  for (let i = 0; i < amount; i += 1) {
+
+  while (amount > 0) {
     const currentBox = document.createElement('div');
-    const newColor = `background-color: rgb(${Math.random() * 255}, ${
+    currentBox.style.backgroundColor = `rgb(${Math.random() * 255}, ${
       Math.random() * 255
     }, ${Math.random() * 255})`;
-    const newSize = `width: ${boxSize}px; height: ${boxSize}px`;
-    currentBox.setAttribute('style', `${newColor}; ${newSize};`);
+    currentBox.style.width = boxSize + 'px';
+    currentBox.style.height = boxSize + 'px';
+
     createdBoxes.push(currentBox);
     boxSize += 10;
+    amount -= 1;
   }
-  boxesDivRef.append(...createdBoxes);
 
-  if (boxesDivRef.lastChild !== null) {
-    boxesDivRef.lastChild.scrollIntoView();
-  }
+  boxesDivRef.append(...createdBoxes);
 };
 
 createBtnRef.addEventListener('click', () => {
-  createBoxes(inputNumberRef.value);
+  createBoxes(inputNumberRef.valueAsNumber);
 });
 
 destroyBtnRef.addEventListener('click', destroyBoxes);
